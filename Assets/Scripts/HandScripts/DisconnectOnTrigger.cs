@@ -12,7 +12,6 @@ public class DisconnectOnTrigger : MonoBehaviour
         var detachObj = other.GetComponent<TypeOfDetachable>();
         if (detachObj != null)
         {
-            Debug.Log("detachable");
             if (detachObj.detachable == detachableType)
             {
                 if (detachObj.attached)
