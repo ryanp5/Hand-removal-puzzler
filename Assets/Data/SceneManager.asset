@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6980b1681fd814149b593a8c04c25606, type: 3}
-  m_Name: LeftHandDetachable
+  m_Script: {fileID: 11500000, guid: 59056d812da7c6c4791b573496c7fc8e, type: 3}
+  m_Name: SceneManager
   m_EditorClassIdentifier: 
-  itemDetached: {fileID: 11400000, guid: 13b0497b154b7b54186133c349817a0a, type: 2}
-  itemAttached: {fileID: 11400000, guid: 58e1b7824a6a6484e85775a4c26549ad, type: 2}
+  gameScenes:
+  - {fileID: 11400000, guid: d8cc7eeaa26e0da428cdef34f213c2e2, type: 2}
+  gameSceneIndex: 0

@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2aefcf10746b2b44978835ab39b8745, type: 3}
   m_Name: RightHandDetachable
   m_EditorClassIdentifier: 
+  itemDetached: {fileID: 11400000, guid: 2fcc0814668d0174786db322076d0a43, type: 2}
+  itemAttached: {fileID: 11400000, guid: 3aad596f2e167274bb2077eb1084eb6f, type: 2}

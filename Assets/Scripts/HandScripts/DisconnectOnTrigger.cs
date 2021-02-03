@@ -4,27 +4,46 @@ using UnityEngine;
 
 public class DisconnectOnTrigger : MonoBehaviour
 {
-    public Detachable detachableType;
-    public GameEvent itemDetached;
-    public GameEvent itemReAttached;
-    private void OnTriggerEnter(Collider other)
+    public List<Detachable> detachableType = new List<Detachable>();
+    
+    private void OnTriggerExit(Collider other)
     {
         var detachObj = other.GetComponent<TypeOfDetachable>();
         if (detachObj != null)
         {
-            if (detachObj.detachable == detachableType)
+            foreach (Detachable detach in detachableType)
             {
-                if (detachObj.attached)
+                if (detachObj.detachable == detach)
                 {
-                    itemDetached.Raise();
-                    detachObj.attached = false;
-                }
-                else
-                {
-                    itemReAttached.Raise();
-                    detachObj.attached = true;
+                    if (detachObj.attached)
+                    {
+                        detach.itemDetached.Raise();
+                    }
+                    else
+                    {
+                        detach.itemAttached.Raise();
+                    }
                 }
             }
         }
+        }
     }
-}
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    var detachObj = other.GetComponent<TypeOfDetachable>();
+    //    if (detachObj != null)
+    //    {
+    //        if (detachObj.detachable == detachableType)
+    //        {
+    //            if (detachObj.attached)
+    //            {
+    //                itemReAttached.Raise();
+    //                count++;
+    //            }
+    //            else
+    //            {
+    //                itemDetached.Raise();
+    //            }
+    //        }
+    //    }
+    //}
