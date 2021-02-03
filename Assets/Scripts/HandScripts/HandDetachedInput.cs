@@ -5,36 +5,62 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
+public enum Hand { Left, Right};
 public class HandDetachedInput : MonoBehaviour
 {
+    public Hand hand;
     private ActionBasedController controller;
     public InputActionMap detachedActionMap = new InputActionMap("Detached");
-    public Vector2Variable RightHandInput;
-    private InputAction moveAction;
+    public Vector2Variable HandInput;
+    private InputAction RightHandmoveAction;
+    private InputAction LeftHandmoveAction;
+    
     // Start is called before the first frame update
     void Start()
     {
-        moveAction = detachedActionMap.AddAction("Move",InputActionType.Value);
+        if (hand == Hand.Right)
+        {
+            RightHandmoveAction = detachedActionMap.AddAction("MoveRightHand", InputActionType.Value);
+            RightHandmoveAction.AddBinding("<XRController>{RightHand}/thumbstick");
+            //RightHandmoveAction.AddBinding("<Gamepad>/leftStick");
+            RightHandmoveAction.performed += MoveAction_performed;
+        } else if (hand == Hand.Left)
+        {
+            LeftHandmoveAction = detachedActionMap.AddAction("MoveLeftHand", InputActionType.Value);
+            LeftHandmoveAction.AddBinding("<XRController>{LeftHand}/thumbstick");
+            LeftHandmoveAction.performed += MoveAction_performed;
+        }
         
-        moveAction.AddBinding("<XRController>{RightHand}/thumbstick");
-        moveAction.AddBinding("<Gamepad>/leftStick");
-        moveAction.performed += MoveAction_performed;
-        controller = GetComponentInParent<ActionBasedController>();
     }
 
     private void MoveAction_performed(InputAction.CallbackContext obj)
     {
-        RightHandInput.value = obj.ReadValue<Vector2>();
+        HandInput.value = obj.ReadValue<Vector2>();
     }
     public void DisableDetachedInput()
     {
         Debug.Log("Disabling detached input");
-        moveAction.Disable();
-        RightHandInput.value = Vector2.zero;
+        if (hand == Hand.Right)
+        {
+            RightHandmoveAction.Disable();
+        } else if (hand == Hand.Left)
+        {
+            LeftHandmoveAction.Disable();
+
+        }
+        HandInput.value = Vector2.zero;
     }
     public void EnableDetachedInput()
     {
         Debug.Log("Enabling detached input");
-        moveAction.Enable();
+        if (hand == Hand.Right)
+        {
+            RightHandmoveAction.Enable();
+        }
+        else if (hand == Hand.Left)
+        {
+            LeftHandmoveAction.Enable();
+
+        }
     }
 }

@@ -12,6 +12,20 @@ public class GameSceneManager : ScriptableObject
     {
         SceneManager.LoadScene(gameScenes[gameSceneIndex].sceneName);
     }
+    public void LoadNextScene()
+    {
+        var nextScene = gameScenes[gameSceneIndex + 1];
+        if (nextScene != null)
+        {
+            SceneManager.LoadScene(nextScene.sceneName);
+            gameSceneIndex++;
+        }
+        else
+        {
+            Debug.Log("Last Scene");
+        }
+    }
+    
     
 
 }
