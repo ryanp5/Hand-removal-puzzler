@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameScenes:
   - {fileID: 11400000, guid: d8cc7eeaa26e0da428cdef34f213c2e2, type: 2}
-  gameSceneIndex: 0
+  - {fileID: 11400000, guid: bab459ea3c9641f46bc8d41fbc420bb2, type: 2}
+  - {fileID: 11400000, guid: 8cd5ec96dadddfc4ab8a2a00f143bda4, type: 2}
+  gameSceneIndex: 2

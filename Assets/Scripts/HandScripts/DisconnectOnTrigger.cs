@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TypeOfArea { InOnly,OutOnly,InAndOut}
+
 public class DisconnectOnTrigger : MonoBehaviour
 {
+    public TypeOfArea area;
     public List<Detachable> detachableType = new List<Detachable>();
     private void OnTriggerExit(Collider other)
     {
@@ -13,13 +16,29 @@ public class DisconnectOnTrigger : MonoBehaviour
         {
             if (detachObj.detachable == detach)
             {
-                if (other.transform.position.x < transform.position.x)
+                float distance = other.transform.position.x - transform.position.x;
+                if (distance < 0)
                 {
-                    detach.itemAttached.Raise();
+                    if (area == TypeOfArea.InAndOut || area == TypeOfArea.OutOnly)
+                    {
+                        detach.itemAttached.Raise();
+                    }
+                    //} else
+                    //{
+                    //    other.transform.position = new Vector3(Mathf.Clamp(other.transform.position.x, transform.position.x + other.bounds.extents.x, Mathf.Infinity), other.transform.position.y, other.transform.position.z);
+
+                    //}
                 }
                 else
                 {
-                    detach.itemDetached.Raise();
+                    if (area == TypeOfArea.InAndOut || area == TypeOfArea.InOnly)
+                    {
+                        detach.itemDetached.Raise();
+                    }
+                    //} else
+                    //{
+                    //    other.transform.position = new Vector3(Mathf.Clamp(other.transform.position.x,-Mathf.Infinity,transform.position.x - other.bounds.extents.x), other.transform.position.y, other.transform.position.z);
+                    //}
                 }
             }
         }
