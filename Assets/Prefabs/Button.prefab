@@ -141,8 +141,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
-  onPress: {fileID: 11400000, guid: 4be7f654af212324bb8039885983adb8, type: 2}
-  onUnPress: {fileID: 11400000, guid: 3abb065fb9c442c4aba00010a6f89cb3, type: 2}
+  onPress: {fileID: 11400000, guid: 3789c820f4711a74ca1fb4f8a164bd8b, type: 2}
+  onUnPress: {fileID: 0}
 --- !u!54 &2732575421464692256
 Rigidbody:
   m_ObjectHideFlags: 0

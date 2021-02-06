@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82d18f9e41c052648bba6e56c9ca6823, type: 3}
-  m_Name: BoxDetachable
+  m_Script: {fileID: 11500000, guid: c0ec20cac7a911e4bbb0b5d6b34f4f1c, type: 3}
+  m_Name: BoxDetach
   m_EditorClassIdentifier: 
-  itemDetached: {fileID: 11400000, guid: a709d0ddf49e96448bf88e675c1fc300, type: 2}
-  itemAttached: {fileID: 11400000, guid: c3e565910dfe7fd439470f518724bc32, type: 2}

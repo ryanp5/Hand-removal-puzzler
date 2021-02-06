@@ -5,45 +5,47 @@ using UnityEngine;
 public class DisconnectOnTrigger : MonoBehaviour
 {
     public List<Detachable> detachableType = new List<Detachable>();
-    
     private void OnTriggerExit(Collider other)
     {
         var detachObj = other.GetComponent<TypeOfDetachable>();
-        if (detachObj != null)
+
+        foreach (Detachable detach in detachableType)
         {
-            foreach (Detachable detach in detachableType)
+            if (detachObj.detachable == detach)
             {
-                if (detachObj.detachable == detach)
+                if (other.transform.position.x < transform.position.x)
                 {
-                    if (detachObj.attached)
-                    {
-                        detach.itemDetached.Raise();
-                    }
-                    else
-                    {
-                        detach.itemAttached.Raise();
-                    }
+                    detach.itemAttached.Raise();
+                }
+                else
+                {
+                    detach.itemDetached.Raise();
                 }
             }
         }
-        }
     }
+}
     //private void OnTriggerExit(Collider other)
     //{
     //    var detachObj = other.GetComponent<TypeOfDetachable>();
     //    if (detachObj != null)
     //    {
-    //        if (detachObj.detachable == detachableType)
+    //        foreach (Detachable detach in detachableType)
     //        {
-    //            if (detachObj.attached)
+    //            if (detachObj.detachable == detach)
     //            {
-    //                itemReAttached.Raise();
-    //                count++;
-    //            }
-    //            else
-    //            {
-    //                itemDetached.Raise();
+    //                if (detachObj.attached)
+    //                {
+    //                    detach.itemDetached.Raise();
+    //                }
+    //                else
+    //                {
+    //                    detach.itemAttached.Raise();
+    //                }
     //            }
     //        }
     //    }
+    //    }
+    //}
+  
     //}

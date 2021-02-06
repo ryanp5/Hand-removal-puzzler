@@ -8,7 +8,7 @@ public class SimpleButton : MonoBehaviour
     public GameEvent buttonReleased;
     public List<Detachable> interactables = new List<Detachable>();
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         var detachObj = other.GetComponent<TypeOfDetachable>();
         if (detachObj != null)
@@ -29,7 +29,7 @@ public class SimpleButton : MonoBehaviour
         {
             foreach (Detachable d in interactables)
             {
-                if (detachObj.detachable == d)
+                if (detachObj.detachable)
                 {
                     buttonReleased.Raise();
                 }

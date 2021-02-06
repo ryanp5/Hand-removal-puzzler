@@ -6,8 +6,8 @@ public class EndZone : MonoBehaviour
 {
     public Detachable RedType;
     public Detachable BlueType;
-    bool redFin = false;
-    bool blueFin = false;
+    public bool redFin = false;
+    public bool blueFin = false;
     public GameEvent finishedLevel;
 
     private void OnTriggerEnter(Collider other)
