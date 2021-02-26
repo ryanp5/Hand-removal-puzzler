@@ -15,4 +15,8 @@ public class RotateTransformHandler : MonoBehaviour
         transform.rotation = Quaternion.identity;
 
     }
+    public void ResetRotation()
+    {
+        transform.rotation = Quaternion.identity;
+    }
 }

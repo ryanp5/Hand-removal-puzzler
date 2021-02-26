@@ -222,6 +222,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1487375333, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+      propertyPath: m_OnSelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487375333, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487375333, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+      propertyPath: m_OnSelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487375333, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+      propertyPath: m_OnSelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487375333, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+      propertyPath: m_OnSelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 510135533}
+    - target: {fileID: 1487375333, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+      propertyPath: m_OnSelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetRotation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487375333, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+      propertyPath: m_OnSelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8980598826444588560, guid: c4ba796e01d090043993c345237e1a93,
         type: 3}
       propertyPath: m_Name
@@ -230,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 8980598826444588588, guid: c4ba796e01d090043993c345237e1a93,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.19
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8980598826444588588, guid: c4ba796e01d090043993c345237e1a93,
         type: 3}
@@ -240,7 +268,7 @@ PrefabInstance:
     - target: {fileID: 8980598826444588588, guid: c4ba796e01d090043993c345237e1a93,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.8
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 8980598826444588588, guid: c4ba796e01d090043993c345237e1a93,
         type: 3}
@@ -284,6 +312,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ba796e01d090043993c345237e1a93, type: 3}
+--- !u!1 &510135532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8980598826444588560, guid: c4ba796e01d090043993c345237e1a93,
+    type: 3}
+  m_PrefabInstance: {fileID: 421261728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &510135533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510135532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa9741f68b2d5e4498383d64f92fe31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &510135534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510135532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e58612ef63ea1145b9a0392e30e443c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a709d0ddf49e96448bf88e675c1fc300, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 510135533}
+        m_MethodName: ResetRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &510135535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510135532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e58612ef63ea1145b9a0392e30e443c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c3e565910dfe7fd439470f518724bc32, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 510135533}
+        m_MethodName: ResetRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &614404181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37556,7 +37656,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-19234
+  m_Name: pb_Mesh-1286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37719,7 +37819,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22860
+  m_Name: pb_Mesh17814
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37956,7 +38056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-19224
+  m_Name: pb_Mesh-15302
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38210,7 +38310,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-19260
+  m_Name: pb_Mesh-1312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38379,7 +38479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450127ebf38e934b9bb90d2c0ac6daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: 2
+  area: 0
   detachableType:
   - {fileID: 11400000, guid: 966a991796c0b394ea42948f26e1c99d, type: 2}
   - {fileID: 11400000, guid: 916cb22802a876a4ca41a88518162015, type: 2}
