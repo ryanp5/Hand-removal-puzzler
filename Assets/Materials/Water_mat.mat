@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water_mat
-  m_Shader: {fileID: -6465566751694194690, guid: 3fde491cf95103e4893ee0e9525ec83b,
+  m_Shader: {fileID: -6465566751694194690, guid: 6b07f83747132234bb60e733dbcec92d,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -68,6 +68,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Triplanar_260C580C_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4f06c0680bc48a240a12f30835673e99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Triplanar_50C245A4_Texture_1:
         m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
@@ -77,13 +81,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2F16D288: 2
-    - Vector1_48B07B7C: 2
-    - Vector1_68403E03: 20
+    - Vector1_12BE8BB7: 0.23
+    - Vector1_2F16D288: 0
+    - Vector1_3482B8AF: 2
+    - Vector1_48B07B7C: 0
+    - Vector1_643945BA: 40
+    - Vector1_68403E03: 25
     - Vector1_78F746F2: 2
-    - Vector1_8C292AA: -0.2
-    - Vector1_99AF3745: 0.1
-    - Vector1_A0D1A80C: 0.05
+    - Vector1_8C292AA: -0.1
+    - Vector1_99AF3745: 1
+    - Vector1_A0D1A80C: 0.5
+    - Vector1_D60BD248: 0.2
     - Vector1_F9F07668: 9
     - _AlphaClip: 0
     - _Blend: 0
@@ -107,9 +115,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_6AF6D7E6: {r: 0, g: 0, b: 1, a: 1}
-    - Color_A483333E: {r: 0.33490562, g: 0.71897423, b: 1, a: 0}
-    - Color_FA0DAAA2: {r: 1, g: 1, b: 1, a: 0.5254902}
+    - Color_6AF6D7E6: {r: 0, g: 0.5254902, b: 1, a: 1}
+    - Color_A483333E: {r: 0.3349056, g: 0.71897423, b: 1, a: 1}
+    - Color_FA0DAAA2: {r: 1, g: 1, b: 1, a: 0.92941177}
+    - Vector2_307F471C: {r: 0.82, g: 1, b: 0, a: 0}
+    - Vector2_D8E7F352: {r: 0, g: 0.09, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

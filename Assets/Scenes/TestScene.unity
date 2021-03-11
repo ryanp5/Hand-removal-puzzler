@@ -1717,6 +1717,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1930178997, guid: 482f5583f8a8a3f4fa2242950d8108e4, type: 3}
+      propertyPath: sceneManager
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e74898feef85cc4886570c0c3b41944,
+        type: 2}
+    - target: {fileID: 1930178997, guid: 482f5583f8a8a3f4fa2242950d8108e4, type: 3}
+      propertyPath: timeToHold
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964124389, guid: 482f5583f8a8a3f4fa2242950d8108e4, type: 3}
+      propertyPath: timeToHold
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7989102370973914993, guid: 482f5583f8a8a3f4fa2242950d8108e4,
         type: 3}
       propertyPath: m_InteractionManager

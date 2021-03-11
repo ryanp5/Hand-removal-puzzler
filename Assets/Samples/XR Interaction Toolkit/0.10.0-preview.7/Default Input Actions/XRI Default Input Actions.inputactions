@@ -154,6 +154,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ReturnToMenu",
+                    "type": "Button",
+                    "id": "1edcc612-25df-4c15-a17c-eaa6155e9d4a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -332,6 +340,17 @@
                     "action": "Haptic Device",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a9aca51-b861-4dcd-ab19-4a66382bc1d4",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "ReturnToMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -440,6 +459,14 @@
                     "type": "Value",
                     "id": "6f7cf253-7062-443b-b10f-2be48a33f027",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ResetXRTransform",
+                    "type": "Button",
+                    "id": "6fb76f2c-890f-4221-bd5b-1739650d8ce6",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -607,6 +634,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Haptic Device",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca0be92f-3f35-464e-b3ff-f8ea398ee551",
+                    "path": "<XRController>{RightHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetXRTransform",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5af1281-27dd-4ba7-8e65-2a82df84f757",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetXRTransform",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

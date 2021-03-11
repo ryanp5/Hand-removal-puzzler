@@ -322,7 +322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450127ebf38e934b9bb90d2c0ac6daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  area: 0
   detachableType:
   - {fileID: 11400000, guid: b2b2b0a9350a8284eb8bd8b7cdc31782, type: 2}
   - {fileID: 11400000, guid: 916cb22802a876a4ca41a88518162015, type: 2}
   - {fileID: 11400000, guid: 966a991796c0b394ea42948f26e1c99d, type: 2}
+  Detachables: {fileID: 0}

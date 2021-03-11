@@ -17,9 +17,9 @@ TagManager:
   - BottomButton
   - VRButton
   - Box
-  - MoveBox
-  - 
-  - 
+  - BoxInteractable
+  - BoxNotInteractable
+  - Detacher
   - 
   - 
   - 

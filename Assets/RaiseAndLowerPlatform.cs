@@ -30,5 +30,5 @@ public class RaiseAndLowerPlatform : MonoBehaviour
     {
         bridgeUp = false;
     }
-
+    
 }

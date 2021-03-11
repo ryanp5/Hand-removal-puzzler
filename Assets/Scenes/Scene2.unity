@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -37327,7 +37327,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9bfe0bf5f4b1a8f418f34e3993d25671, type: 2}
+      objectReference: {fileID: 2100000, guid: f37531780c61d534e88e021210b7998a, type: 2}
     - target: {fileID: 8703074687822866933, guid: b75a911ab6110c94996ef720a611a610,
         type: 3}
       propertyPath: m_Mesh
@@ -37656,7 +37656,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1286
+  m_Name: pb_Mesh-71564
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37819,7 +37819,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17814
+  m_Name: pb_Mesh21104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38479,10 +38479,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450127ebf38e934b9bb90d2c0ac6daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: 0
+  area: 2
   detachableType:
   - {fileID: 11400000, guid: 966a991796c0b394ea42948f26e1c99d, type: 2}
   - {fileID: 11400000, guid: 916cb22802a876a4ca41a88518162015, type: 2}
+  Detachables: {fileID: 0}
 --- !u!4 &1348158468498161937
 Transform:
   m_ObjectHideFlags: 0
@@ -38756,9 +38757,17 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 04000000
+  m_SelectedEdges:
+  - a: 16
+    b: 17
+  - a: 18
+    b: 16
+  - a: 17
+    b: 19
+  - a: 19
+    b: 18
+  m_SelectedVertices: 10000000110000001200000013000000
 --- !u!65 &1348158468498161965
 BoxCollider:
   m_ObjectHideFlags: 0
