@@ -11,10 +11,12 @@ public class DisconnectOnTrigger : MonoBehaviour
     private BoxCollider AreaCollider;
     public GameObject triggerAttacher;
     public Detachable box;
+    private DisconnetOnCollision disconnetOnCollision;
     private void Start()
     {
+        disconnetOnCollision = GetComponentInChildren<DisconnetOnCollision>();
         AreaCollider = GetComponent<BoxCollider>();
-        Physics.IgnoreLayerCollision(14, 13);
+        //Physics.IgnoreLayerCollision(13, 14);
         if (area == TypeOfArea.InAndOut)
         {
 
@@ -28,49 +30,7 @@ public class DisconnectOnTrigger : MonoBehaviour
 
         }
     }
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    var detachObj = other.GetComponent<TypeOfDetachable>();
-    //    if (detachObj != null)
-    //    {
-    //        foreach (Detachable detach in detachableType)
-    //        {
-    //            if (detachObj.detachable == detach)
-    //            {
-    //                float distance = other.transform.position.x - transform.position.x;
-    //                if (distance < 0)
-    //                {
-    //                    //if (area == TypeOfArea.InAndOut || area == TypeOfArea.OutOnly)
-    //                    //{
-    //                    //    detach.itemAttached.Raise();
-
-    //                    //}
-    //                    //} else
-    //                    //{
-    //                    //    other.transform.position = new Vector3(Mathf.Clamp(other.transform.position.x, transform.position.x + other.bounds.extents.x, Mathf.Infinity), other.transform.position.y, other.transform.position.z);
-
-    //                    //}
-    //                }
-    //                else
-    //                {
-    //                    if (area == TypeOfArea.InAndOut || area == TypeOfArea.InOnly)
-    //                    {
-    //                        detach.itemDetached.Raise();
-    //                        AreaCollider.isTrigger = false;
-    //                    }
-    //                    //} else
-    //                    //{
-    //                    //    other.transform.position = new Vector3(Mathf.Clamp(other.transform.position.x,-Mathf.Infinity,transform.position.x - other.bounds.extents.x), other.transform.position.y, other.transform.position.z);
-    //                    //}
-    //                }
-    //            } else
-    //            {
-                    
-    //            }
-    //        }
-    //    }
-    //}
+    
     private void OnCollisionEnter(Collision collision)
     {
         var detachObj = collision.collider.GetComponent<TypeOfDetachable>();
@@ -82,8 +42,11 @@ public class DisconnectOnTrigger : MonoBehaviour
                 {
                     if (area == TypeOfArea.InAndOut || area == TypeOfArea.OutOnly)
                     {
-                        detach.itemAttached.Raise();
-                        triggerAttacher.SetActive(true);
+                        if (disconnetOnCollision.waitForDisconnect)
+                        {
+                            detach.itemAttached.Raise();
+                            triggerAttacher.SetActive(true);
+                        }
                     }
                 }
 

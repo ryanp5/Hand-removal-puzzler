@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9172406807261915428}
   - component: {fileID: 9172406807261915419}
   - component: {fileID: 9172406807261915418}
+  - component: {fileID: 6291860533688129335}
   m_Layer: 0
   m_Name: KillZone
   m_TagString: Untagged
@@ -316,6 +317,7 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
+  m_Mesh: {fileID: 0}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -349,3 +351,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 966a991796c0b394ea42948f26e1c99d, type: 2}
   - {fileID: 11400000, guid: b2b2b0a9350a8284eb8bd8b7cdc31782, type: 2}
   resetScene: {fileID: 11400000, guid: 3789c820f4711a74ca1fb4f8a164bd8b, type: 2}
+--- !u!114 &6291860533688129335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172406807261915417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6ae4a818c83cb4398a2c99c9ac4d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riverStrength: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 247600

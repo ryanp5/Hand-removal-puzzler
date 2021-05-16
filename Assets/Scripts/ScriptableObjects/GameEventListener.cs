@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+public struct eventArgs
+{
+    string name;
+    bool boolean;
+    float value; 
+}
 public class GameEventListener : MonoBehaviour
 {
     public GameEvent Event;

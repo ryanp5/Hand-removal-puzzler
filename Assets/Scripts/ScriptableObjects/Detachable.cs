@@ -6,4 +6,6 @@ public class Detachable : ScriptableObject
 {
     public GameEvent itemDetached;
     public GameEvent itemAttached;
+
+    public GameEvent Killed;
 }

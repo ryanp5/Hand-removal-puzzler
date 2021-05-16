@@ -20,9 +20,9 @@ TagManager:
   - BoxInteractable
   - BoxNotInteractable
   - Detacher
-  - 
-  - 
-  - 
+  - LoadingScene
+  - UninteractableArea
+  - PlayerRagdoll
   - 
   - 
   - 

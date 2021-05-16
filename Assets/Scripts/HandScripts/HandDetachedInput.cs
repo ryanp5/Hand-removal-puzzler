@@ -22,7 +22,7 @@ public class HandDetachedInput : MonoBehaviour
         {
             RightHandmoveAction = detachedActionMap.AddAction("MoveRightHand", InputActionType.Value);
             RightHandmoveAction.AddBinding("<XRController>{RightHand}/thumbstick");
-            //RightHandmoveAction.AddBinding("<Gamepad>/leftStick");
+            RightHandmoveAction.AddBinding("<Gamepad>/rightStick");
             RightHandmoveAction.performed += MoveAction_performed;
         } else if (hand == Hand.Left)
         {
@@ -39,7 +39,7 @@ public class HandDetachedInput : MonoBehaviour
     }
     public void DisableDetachedInput()
     {
-        Debug.Log("Disabling detached input");
+        //Debug.Log("Disabling detached input");
         if (hand == Hand.Right)
         {
             RightHandmoveAction.Disable();
@@ -52,7 +52,7 @@ public class HandDetachedInput : MonoBehaviour
     }
     public void EnableDetachedInput()
     {
-        Debug.Log("Enabling detached input");
+        //Debug.Log("Enabling detached input");
         if (hand == Hand.Right)
         {
             RightHandmoveAction.Enable();

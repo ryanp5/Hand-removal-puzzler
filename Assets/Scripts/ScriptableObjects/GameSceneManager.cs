@@ -1,26 +1,38 @@
-﻿using System.Collections;
+﻿using System.Threading.Tasks;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/SceneManager")]
 public class GameSceneManager : ScriptableObject
 {
-    public GameScene MenuScene;
+    public GameEvent OnLoadStart;
+    public GameEvent OnLoadEnd;
     public List<GameScene> gameScenes = new List<GameScene>();
     public int gameSceneIndex;
     private GameScene currentScene;
+    public bool isLoading = false;
+    //Fade in/fade out components
+    //private void Awake()
+    //{
+    //    SceneManager.sceneLoaded += SetActiveScene;
+    //}
+    //private void OnDestroy()
+    //{
+    //    SceneManager.sceneLoaded -= SetActiveScene;
+    //}
     public void ReloadCurrentScene()
     {
-        SceneManager.LoadScene(gameScenes[gameSceneIndex].sceneName);
+        LoadNewScene(gameSceneIndex);
     }
     public void LoadNextScene()
     {
         var nextScene = gameScenes[gameSceneIndex + 1];
         if (nextScene != null)
         {
-            SceneManager.LoadScene(nextScene.sceneName);
-            gameSceneIndex++;
+            LoadNewScene(gameSceneIndex +1);
         }
         else
         {
@@ -29,26 +41,59 @@ public class GameSceneManager : ScriptableObject
     }
     public void LoadMainMenu()
     {
-        if (SceneManager.GetActiveScene().name != MenuScene.name)
-        SceneManager.LoadScene(MenuScene.name);
+        if (SceneManager.GetActiveScene().name != gameScenes[0].sceneName)
+            LoadNewScene(0);
     
     }
-    public void LoadScene(int sceneId)
+    public void LoadNewScene(int sceneId)
     {
-        SceneManager.LoadScene(gameScenes[sceneId].sceneName);
-        gameSceneIndex = sceneId;
+        if (!isLoading)
+        {
+            LoadScene(sceneId);
+        }
     }
-    public void MainMenuLoadLastScene()
+    public async void LoadScene(int sceneId)
     {
-        if (gameSceneIndex <= 0)
+        isLoading = true;
+            OnLoadStart.Raise();
+            await WaitForFade(2000);
+            UnLoadScene();
+            //await Task.Delay(5000);
+            LoadNew(sceneId);
+            gameSceneIndex = sceneId;
+            OnLoadEnd.Raise();
+            await WaitForFade(2000);
+
+        isLoading = false;
+    }
+    
+    public async void UnLoadScene()
+    {
+        AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        while (!unloadOperation.isDone)
         {
-            SceneManager.LoadScene(gameScenes[0].sceneName);
-        } else
+            await Task.Yield();
+        }
+    }
+    private async void LoadNew(int sceneId)
+    {
+       AsyncOperation loadOperation = SceneManager.LoadSceneAsync(gameScenes[sceneId].sceneName, LoadSceneMode.Additive);
+       
+        while (!loadOperation.isDone)
         {
-            SceneManager.LoadScene(gameScenes[gameSceneIndex].sceneName);
+            await Task.Yield();
         }
     }
 
-   
+    public async Task WaitForFade(int time)
+    {
+        await Task.Delay(time);
+    }
+
+    //private void SetActiveScene(Scene scene, LoadSceneMode mode)
+    //{
+    //    SceneManager.SetActiveScene(scene);
+    //}
+
 
 }

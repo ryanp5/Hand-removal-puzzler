@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDetached: {fileID: 11400000, guid: 13b0497b154b7b54186133c349817a0a, type: 2}
   itemAttached: {fileID: 11400000, guid: 58e1b7824a6a6484e85775a4c26549ad, type: 2}
+  Killed: {fileID: 11400000, guid: c121325bdae24cc4690f75b1cc0a7e00, type: 2}

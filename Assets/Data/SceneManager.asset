@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59056d812da7c6c4791b573496c7fc8e, type: 3}
   m_Name: SceneManager
   m_EditorClassIdentifier: 
-  MenuScene: {fileID: 11400000, guid: 838954297dc2f8d4cac547200bbfa1f9, type: 2}
+  OnLoadStart: {fileID: 11400000, guid: e53190e1028d3ec4ab39e1d9993bee36, type: 2}
+  OnLoadEnd: {fileID: 11400000, guid: df4513fb8931c99419e5c1a19240065d, type: 2}
   gameScenes:
+  - {fileID: 11400000, guid: 838954297dc2f8d4cac547200bbfa1f9, type: 2}
   - {fileID: 11400000, guid: bab459ea3c9641f46bc8d41fbc420bb2, type: 2}
   - {fileID: 11400000, guid: 8cd5ec96dadddfc4ab8a2a00f143bda4, type: 2}
   - {fileID: 11400000, guid: a08070b0ee137ef499ece97baa24fadb, type: 2}
-  gameSceneIndex: 1
+  - {fileID: 11400000, guid: 43430d21f9f68e048a2821e7d1c9c908, type: 2}
+  - {fileID: 11400000, guid: d8cc7eeaa26e0da428cdef34f213c2e2, type: 2}
+  gameSceneIndex: 2
+  isLoading: 0

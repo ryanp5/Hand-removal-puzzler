@@ -162,6 +162,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Grip",
+                    "type": "Value",
+                    "id": "3dec4eda-499e-4fa2-805b-85e700965a64",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -351,6 +359,17 @@
                     "action": "ReturnToMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c603ee10-d17b-4fb1-8966-42f615d74fea",
+                    "path": "<OculusTouchController>{LeftHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -467,6 +486,14 @@
                     "type": "Button",
                     "id": "6fb76f2c-890f-4221-bd5b-1739650d8ce6",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Grip",
+                    "type": "Value",
+                    "id": "65e73f78-21f6-4fd0-a161-b30ecafb64aa",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
                 }
@@ -656,6 +683,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ResetXRTransform",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce9f83c8-dc5e-4943-8432-e5fb5c5f1e4e",
+                    "path": "<OculusTouchController>{RightHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Grip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
