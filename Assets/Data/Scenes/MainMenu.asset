@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: MainMenu
   m_EditorClassIdentifier: 
   sceneName: MainMenu
+  leftAttachedAtStart: 1
+  rightAttachedAtStart: 1
+  LevelUIText: 

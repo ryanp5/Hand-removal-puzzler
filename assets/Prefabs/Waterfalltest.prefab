@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 5580058972480434631}
   m_LocalRotation: {x: 0.00000008940697, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.36666667, y: 0.053333323, z: -0.33499998}
-  m_LocalScale: {x: 0.6666667, y: 0.66666687, z: 0.5000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5402880769027643907}
   m_RootOrder: 0
@@ -4808,7 +4808,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 777ac9349b565154c9d9d4f87e44a39c, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

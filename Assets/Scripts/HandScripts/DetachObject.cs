@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DetachObject : MonoBehaviour
 {
-    private GameObject Parent;
+    public GameObject Parent;
+    
     private void Start()
     {
-        Parent = gameObject.transform.parent.gameObject;
+        //Parent = gameObject.transform.parent.gameObject;
     }
     public void DettachObject()
     {

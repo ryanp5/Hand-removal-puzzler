@@ -20,6 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8cd5ec96dadddfc4ab8a2a00f143bda4, type: 2}
   - {fileID: 11400000, guid: a08070b0ee137ef499ece97baa24fadb, type: 2}
   - {fileID: 11400000, guid: 43430d21f9f68e048a2821e7d1c9c908, type: 2}
+  - {fileID: 11400000, guid: d3cfbe5078f452f41b8a9ebe1f395651, type: 2}
   - {fileID: 11400000, guid: d8cc7eeaa26e0da428cdef34f213c2e2, type: 2}
-  gameSceneIndex: 2
+  gameSceneIndex: 5
   isLoading: 0

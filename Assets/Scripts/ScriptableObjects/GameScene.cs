@@ -7,4 +7,8 @@ public class GameScene : ScriptableObject
 {
     [Header("Information")]
     public string sceneName;
+
+    public bool leftAttachedAtStart;
+    public bool rightAttachedAtStart;
+    public string LevelUIText;
 }

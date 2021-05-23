@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Scene 1
   m_EditorClassIdentifier: 
   sceneName: Scene1
+  leftAttachedAtStart: 1
+  rightAttachedAtStart: 1
+  LevelUIText: 1. The Beginning

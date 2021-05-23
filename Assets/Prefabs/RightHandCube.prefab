@@ -399,7 +399,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.082077965, y: -0.0675166, z: -0.015995594}
+  m_ConnectedAnchor: {x: 0.08207796, y: -0.0675166, z: -0.015995594}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -576,7 +576,7 @@ Transform:
   m_GameObject: {fileID: 4874200962949140683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4722448046896875598}
   - {fileID: 9068232604270803126}
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detachable: {fileID: 11400000, guid: b2b2b0a9350a8284eb8bd8b7cdc31782, type: 2}
-  attached: 1
+  attached: 0
 --- !u!114 &4874200962949140678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbda2fc0a90f4ff41925a02c1f76dc4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Parent: {fileID: 0}
 --- !u!114 &4874200962949140540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: c69b1bbf29139664195f2f55f48906ce, type: 2}
+  moveVector: {x: 0, y: 0, z: 0}
 --- !u!114 &1569556574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,7 +918,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -1278,7 +1280,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.041059814, y: 0.2049967, z: -0.02267043}
+  m_ConnectedAnchor: {x: -0.041059814, y: 0.2049967, z: -0.022670437}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:

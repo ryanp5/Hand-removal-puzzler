@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8247501885656772124}
   - component: {fileID: 8247501885656772127}
   - component: {fileID: 8247501885656772123}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Dustfield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4727,7 +4727,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 914c4ecb11a39f645b9c54d16bc25c4f, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

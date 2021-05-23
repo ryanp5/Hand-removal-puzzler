@@ -26,11 +26,7 @@ public class RotateTransformHandler : MonoBehaviour
         //transform.rotation = new Quaternion(Quaternion.identity.x,transform.rotation.y,Quaternion.identity.z,Quaternion.identity.w);
 
     }
-    public void OnDetachKillVelocity()
-    {
-        Debug.Log(this.name + " select exited");
-
-    }
+    
     public void ResetRotation()
     {
         this.transform.rotation = Quaternion.identity;

@@ -23,6 +23,14 @@ public class GameSceneManager : ScriptableObject
     //{
     //    SceneManager.sceneLoaded -= SetActiveScene;
     //}
+    public GameScene GetCurrentScene()
+    {
+        return gameScenes[gameSceneIndex];
+    }
+    public GameScene GetNextScene()
+    {
+        return gameScenes[gameSceneIndex+1];
+    }
     public void ReloadCurrentScene()
     {
         LoadNewScene(gameSceneIndex);
@@ -57,17 +65,14 @@ public class GameSceneManager : ScriptableObject
         isLoading = true;
             OnLoadStart.Raise();
             await WaitForFade(2000);
-            UnLoadScene();
-            //await Task.Delay(5000);
-            LoadNew(sceneId);
+            UnLoadScene(sceneId);
             gameSceneIndex = sceneId;
-            OnLoadEnd.Raise();
-            await WaitForFade(2000);
+            LoadNew(sceneId);
 
         isLoading = false;
     }
     
-    public async void UnLoadScene()
+    public async void UnLoadScene(int sceneId)
     {
         AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         while (!unloadOperation.isDone)
@@ -83,6 +88,7 @@ public class GameSceneManager : ScriptableObject
         {
             await Task.Yield();
         }
+        OnLoadEnd.Raise();
     }
 
     public async Task WaitForFade(int time)

@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: 
   sceneName: TestScene
+  leftAttachedAtStart: 1
+  rightAttachedAtStart: 1
+  LevelUIText: 

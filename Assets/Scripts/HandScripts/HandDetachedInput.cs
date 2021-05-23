@@ -30,7 +30,7 @@ public class HandDetachedInput : MonoBehaviour
             LeftHandmoveAction.AddBinding("<XRController>{LeftHand}/thumbstick");
             LeftHandmoveAction.performed += MoveAction_performed;
         }
-        
+        EnableDetachedInput();
     }
 
     private void MoveAction_performed(InputAction.CallbackContext obj)

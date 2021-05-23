@@ -20,7 +20,6 @@ public class GrabIkController : MonoBehaviour
         {
             if (animator.GetBool("Attached"))
             {
-               
                 if (rightHandTarget != null)
                 {
                     animator.SetIKPositionWeight(AvatarIKGoal.RightHand, gripValue.value);

@@ -32,6 +32,7 @@ public class DisconnetOnCollision : MonoBehaviour
         waitForDisconnect = true;
     }
 
+    //Note: only work on x axis currently
     private void OnTriggerExit(Collider other)
     {
         var detachObj = other.GetComponent<TypeOfDetachable>();
