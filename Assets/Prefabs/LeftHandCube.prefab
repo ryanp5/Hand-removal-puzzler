@@ -288,8 +288,8 @@ GameObject:
   - component: {fileID: 6597293214143509241}
   - component: {fileID: 6597293214143509234}
   - component: {fileID: 2970003425657849051}
-  - component: {fileID: 806266451823038202}
   - component: {fileID: 4472398381485379169}
+  - component: {fileID: 806266451823038202}
   - component: {fileID: 6528541819991276246}
   m_Layer: 8
   m_Name: LeftHandCube
@@ -644,23 +644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMasterList: {fileID: 11400000, guid: 9d745baf34b3b2b4883f800362d4300e, type: 2}
---- !u!114 &806266451823038202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741460163197446758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b3d1f68d5cfa74d8c8d105138a8dc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DetachableTypes:
-  - {fileID: 11400000, guid: 916cb22802a876a4ca41a88518162015, type: 2}
-  - {fileID: 11400000, guid: 6101cc45b1d914f469cd3fba2fd5edf8, type: 2}
-  - {fileID: 11400000, guid: 3adfecfaff772844e93d95443babef6f, type: 2}
-  thingBeingPushed: {fileID: 0}
 --- !u!114 &4472398381485379169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +661,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 163349
   distanceToTrigger: 2
+--- !u!114 &806266451823038202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741460163197446758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b3d1f68d5cfa74d8c8d105138a8dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetachableTypes:
+  - {fileID: 11400000, guid: 916cb22802a876a4ca41a88518162015, type: 2}
+  - {fileID: 11400000, guid: 6101cc45b1d914f469cd3fba2fd5edf8, type: 2}
+  - {fileID: 11400000, guid: 3adfecfaff772844e93d95443babef6f, type: 2}
+  thingBeingPushed: {fileID: 0}
 --- !u!136 &6528541819991276246
 CapsuleCollider:
   m_ObjectHideFlags: 0
