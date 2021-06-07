@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f61560aee50d04aab23eaf0689b318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 3114513292426535628}
   input: {fileID: 11400000, guid: c69b1bbf29139664195f2f55f48906ce, type: 2}
   moveVector: {x: 0, y: 0, z: 0}
 --- !u!114 &1569556574
@@ -969,7 +970,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3adfecfaff772844e93d95443babef6f, type: 2}
   - {fileID: 11400000, guid: 6101cc45b1d914f469cd3fba2fd5edf8, type: 2}
   - {fileID: 11400000, guid: 916cb22802a876a4ca41a88518162015, type: 2}
+  animator: {fileID: 3114513292426535628}
   thingBeingPushed: {fileID: 0}
+  pushing: 0
+  pushDirStart: {x: 0, y: 0}
 --- !u!136 &1127655108415465091
 CapsuleCollider:
   m_ObjectHideFlags: 0

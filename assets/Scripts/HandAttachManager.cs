@@ -7,6 +7,7 @@ public class HandAttachManager : MonoBehaviour
     public GameSceneManager sceneManager;
     public GameEvent leftAttach;
     public GameEvent rightAttach;
+
     public void CheckIfReattach()
     {
         if (sceneManager.GetCurrentScene().leftAttachedAtStart)

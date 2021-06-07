@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDetached: {fileID: 0}
   itemAttached: {fileID: 0}
+  Killed: {fileID: 0}
   BoxToDetach: {fileID: 11400000, guid: b2b2b0a9350a8284eb8bd8b7cdc31782, type: 2}
-  PortalMat: {fileID: 2100000, guid: a233edc06e481574a94b1c3de3af69e6, type: 2}
+  PortalMat: {fileID: 2100000, guid: fd79b6294dec939478d00669176ef9e6, type: 2}

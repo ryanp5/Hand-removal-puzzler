@@ -7,7 +7,7 @@ public class AddDetachableType : MonoBehaviour
 {
     private DisconnectOnTrigger disconnectOnTrigger;
     private DisconnetOnCollision disconnetOnCollision;
-    private MeshRenderer meshRenderer;
+    public MeshRenderer meshRenderer;
     public Material CombinedMaterial;
     public Material original;
     private Material removal;
@@ -15,7 +15,6 @@ public class AddDetachableType : MonoBehaviour
     {
         disconnectOnTrigger = GetComponent<DisconnectOnTrigger>();
         disconnetOnCollision = GetComponentInChildren<DisconnetOnCollision>();
-        meshRenderer = GetComponent<MeshRenderer>();
         original = meshRenderer.material;
     }
     //private void OnCollisionEnter(Collision collision)

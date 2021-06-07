@@ -8,6 +8,8 @@ public struct eventArgs
     bool boolean;
     float value; 
 }
+
+[AddComponentMenu("EventListener/GameEvent Listener")]
 public class GameEventListener : MonoBehaviour
 {
     public GameEvent Event;

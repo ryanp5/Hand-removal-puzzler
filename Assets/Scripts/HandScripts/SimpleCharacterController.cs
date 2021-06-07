@@ -36,4 +36,8 @@ public class SimpleCharacterController : MonoBehaviour
     {
         rigidbody.MovePosition(rigidbody.position+ vector3* Speed*Time.fixedDeltaTime);
     }
+    public void CharacterClimb(Vector3 direction, float height)
+    {
+        transform.position += new Vector3(direction.x, height, direction.z);
+    }
 }

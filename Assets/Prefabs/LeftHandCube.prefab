@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f61560aee50d04aab23eaf0689b318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 8555388600876114696}
   input: {fileID: 11400000, guid: f6a71b8768f90ef48b4f57e3e1ebda42, type: 2}
   moveVector: {x: 0, y: 0, z: 0}
 --- !u!114 &6597293214143509235
@@ -626,8 +627,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -677,7 +678,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 916cb22802a876a4ca41a88518162015, type: 2}
   - {fileID: 11400000, guid: 6101cc45b1d914f469cd3fba2fd5edf8, type: 2}
   - {fileID: 11400000, guid: 3adfecfaff772844e93d95443babef6f, type: 2}
+  animator: {fileID: 8555388600876114696}
   thingBeingPushed: {fileID: 0}
+  pushing: 0
+  pushDirStart: {x: 0, y: 0}
 --- !u!136 &6528541819991276246
 CapsuleCollider:
   m_ObjectHideFlags: 0

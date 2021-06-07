@@ -8,12 +8,15 @@ public class GameEventListenerButton : Editor
 {
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
         GameEventListener gameEventListener = (GameEventListener)target;
-        if (GUILayout.Button("Raise Event"))
+        
+        if (GUILayout.Button("Raise " +gameEventListener.Event.name, GUILayout.Height(50)))
         {
             gameEventListener.Event.Raise();
         }
+        DrawDefaultInspector();
+
+        
     }
 
 }
