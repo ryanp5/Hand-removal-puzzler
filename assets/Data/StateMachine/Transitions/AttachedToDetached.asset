@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e919f98b95e0a34a8ef780e26aba6b4, type: 3}
+  m_Name: AttachedToDetached
+  m_EditorClassIdentifier: 
+  conditions:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: Vector2Condition, ns: , asm: Assembly-CSharp}
+      data:
+        name: 
+        vec: {fileID: 11400000, guid: f6a71b8768f90ef48b4f57e3e1ebda42, type: 2}

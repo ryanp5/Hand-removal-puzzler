@@ -2,21 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TypeOfArea { InOnly,OutOnly,InAndOut}
-
 public class DisconnectOnTrigger : MonoBehaviour
 {
     public TypeOfArea area;
     public List<Detachable> detachableType = new List<Detachable>();
     private BoxCollider AreaCollider;
-    public GameObject triggerAttacher;
     public Detachable box;
-    private DisconnetOnCollision disconnetOnCollision;
+    public bool waitForDisconnect = true;
     private void Start()
     {
-        disconnetOnCollision = GetComponentInChildren<DisconnetOnCollision>();
         AreaCollider = GetComponent<BoxCollider>();
-        //Physics.IgnoreLayerCollision(13, 14);
         if (area == TypeOfArea.InAndOut)
         {
 
@@ -30,29 +25,46 @@ public class DisconnectOnTrigger : MonoBehaviour
 
         }
     }
-    
-    private void OnCollisionEnter(Collision collision)
+    IEnumerator WaitForDetach(float seconds)
     {
-        var detachObj = collision.collider.GetComponent<TypeOfDetachable>();
+        waitForDisconnect = false;
+        yield return new WaitForSeconds(seconds);
+        waitForDisconnect = true;
+    }
+
+    //Note: only work on x axis currently
+    private void OnTriggerExit(Collider other)
+    {
+        var detachObj = other.GetComponent<TypeOfDetachable>();
         if (detachObj != null)
         {
             foreach (Detachable detach in detachableType)
             {
                 if (detachObj.detachable == detach)
                 {
-                    if (area == TypeOfArea.InAndOut || area == TypeOfArea.OutOnly)
+                    float distance = other.transform.position.x - transform.position.x;
+                    if (distance < 0)
                     {
-                        if (disconnetOnCollision.waitForDisconnect)
+                        //if (area == TypeOfArea.InAndOut || area == TypeOfArea.OutOnly)
+                        //{
+                        //    if (detachObj.detachable == box)
+                        //    {
+                        //        detach.itemAttached.Raise();
+                        //    }
+                        //}
+                        
+                    }
+                    else
+                    {
+                        if (area == TypeOfArea.InAndOut || area == TypeOfArea.InOnly)
                         {
-                            detach.itemAttached.Raise();
-                            triggerAttacher.SetActive(true);
+                            StartCoroutine(WaitForDetach(0.2f));
+                            detach.itemDetached.Raise();
+                            //this.enabled = false;
                         }
                     }
                 }
-
             }
         }
     }
 }
-
-

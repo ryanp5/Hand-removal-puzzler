@@ -30,14 +30,17 @@ public class SimpleCharacterController : MonoBehaviour
     }
     private void Update()
     {
-        isGrounded = CheckIfGrounded();   
+        isGrounded = CheckIfGrounded();
     }
     public void Move(Vector3 vector3)
     {
-        rigidbody.MovePosition(rigidbody.position+ vector3* Speed*Time.fixedDeltaTime);
+        rigidbody.MovePosition(rigidbody.position+ vector3*Speed*Time.fixedDeltaTime);
     }
     public void CharacterClimb(Vector3 direction, float height)
     {
+        rigidbody.isKinematic = true;
         transform.position += new Vector3(direction.x, height, direction.z);
+        rigidbody.isKinematic = false;
+
     }
 }
